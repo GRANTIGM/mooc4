@@ -1,0 +1,72 @@
+/* ===== RESET & BASE ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fbf8f8;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 35px;
+}
+
+h2 {
+  text-align: center;
+}
+
+a {
+  color: #0c0c0c;
+  text-decoration: none;
+}
+
+p {
+  font-size: 30px;
+  text-align: center;
+}
+
+/* ===== IMAGE CONTAINERS ===== */
+main {
+  text-align: center; /* tránh lỗi inline-block bị lệch */
+}
+
+main > div {
+  width: 100%;
+  margin: 15px auto;
+}
+
+/* 🔴 QUAN TRỌNG NHẤT */
+main > div img {
+  width: 100%;
+  height: 220px;        /* chiều cao CỐ ĐỊNH → ảnh bằng nhau */
+  object-fit: cover;   /* cắt ảnh cho vừa khung */
+  display: block;
+}
+
+/* ===== TABLET ===== */
+@media screen and (min-width: 772px) {
+  main > div {
+    display: inline-block;
+    width: 45%;
+    margin: 15px;
+    vertical-align: top;
+  }
+
+  main > div img {
+    height: 240px;
+  }
+}
+
+/* ===== DESKTOP ===== */
+@media screen and (min-width: 998px) {
+  main > div {
+    width: 30%;
+  }
+
+  main > div img {
+    height: 260px;
+  }
+}
